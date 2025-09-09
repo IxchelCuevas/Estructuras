@@ -9,24 +9,20 @@ void print_spiral(int **A, int N, int M) {
     int first = 1;
 
     while (top <= bottom && left <= right) {
-        // 1) fila superior
         for (int c = left; c <= right; ++c) {
             if (!first) printf(" ");
             printf("%d", A[top][c]); first = 0;
         }
         top++;
 
-        // 2) columna derecha
         for (int r = top; r <= bottom; ++r) printf(" %d", A[r][right]);
         right--;
 
-        // 3) fila inferior
         if (top <= bottom) {
             for (int c = right; c >= left; --c) printf(" %d", A[bottom][c]);
             bottom--;
         }
 
-        // 4) columna izquierda
         if (left <= right) {
             for (int r = bottom; r >= top; --r) printf(" %d", A[r][left]);
             left++;
@@ -43,7 +39,6 @@ int main(void) {
         return 1;
     }
 
-    // Reservamos memoria dinámica
     int **A = (int **)malloc(N * sizeof *A);
     if (!A) return 1;
 
@@ -52,7 +47,7 @@ int main(void) {
 
     for (int r = 0; r < N; ++r) A[r] = block + r * M;
 
-    printf("Ingrese los %d elementos de la matriz (fila por fila):\n", N * M);
+    printf("Ingrese los %d elementos de la matriz (fila por fila separado con espacios):\n", N * M);
     for (int r = 0; r < N; ++r)
         for (int c = 0; c < M; ++c) {
             scanf("%d", &A[r][c]);}
@@ -60,7 +55,7 @@ int main(void) {
     printf("\nMatriz ingresada:\n");
     for (int r = 0; r < N; ++r) {
         for (int c = 0; c < M; ++c) {
-            printf("%4d", A[r][c]);  // ancho fijo para que quede tabulada
+            printf("%4d", A[r][c]);
         }
         printf("\n");
     }
