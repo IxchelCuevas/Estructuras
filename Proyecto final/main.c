@@ -67,7 +67,7 @@ int main(void) {
             printf("Saliendo del programa...\n");
             break;
         default:
-            printf("Opcion no valida.\n");
+            printf("Opcion no valida HOLAAAA.\n");
             break;
         }
 
