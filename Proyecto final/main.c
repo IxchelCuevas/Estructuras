@@ -33,7 +33,7 @@ int main(void) {
             break;
         case 2:
             printf("Elegiste: Listas ligadas\n");
-            printf("Link: https://drive.google.com/file/d/1YKOmliDGPAig04h-rryx0H2_3juEkeRU/view?usp=drivesdk \n");
+            printf("Link: https://drive.google.com/file/d/1YED1mVKzRSxmhBo_NMG99BGuprSmUCWt/view?usp=drivesdk \n");
             break;
         case 3:
             printf("Elegiste: Pilas (Stacks)\n");
@@ -67,7 +67,7 @@ int main(void) {
             printf("Saliendo del programa...\n");
             break;
         default:
-            printf("Opcion no valida HOLAAAA.\n");
+            printf("Opcion no valida.\n");
             break;
         }
 
